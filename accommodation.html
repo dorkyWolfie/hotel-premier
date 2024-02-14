@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src="./js/time.js" defer></script>
+        <script type='text/javascript' src="./js/weather.js" defer></script>
+        <script type='text/javascript' src="./js/function.js" defer></script>
+        <script type='text/javascript' src="./js/accommodation.js" defer></script>
+        <script type='text/javascript' src='config.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+        <title>Hotel Premier</title>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="/"><img src="./img/hotel-premier-logo.png" alt=""></a>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a class="active" href="accommodation.html">accomodation</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                </nav>
+                <div class="time-weather">
+                    <a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather"></div></a>
+                    <div class="divider"></div>
+                    <div id="realTime"></div>
+                </div>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </div>
+            <div class="dropdown-menu" id="menuNav">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <nav class="mob-nav">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a class="active" href="accommodation.html">accomodation</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                    <div class="time-weather2">
+                        <a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather2"></div></a>
+                        <div class="divider"></div>
+                        <div id="realTime2"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Accommodation</h1>
+            <section>
+                <ul id="accommodation-list" class="buttons">
+                    <li class="active btn">Clasic Single<span></span></li>
+                    <li class="btn">Double Suite<span></span></li>
+                    <li class="btn">Triple Suite<span></span></li>
+                    <li class="btn">Deluxe Apartment<span></span></li>
+                </ul>
+            </section>
+            <section class="accommodation-desc">
+                <div class="item active">
+                    <h3>Clasic Single</h3>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                    </div>
+                    <div class="amenitis">
+                        <div>
+                            <ul>
+                                <li>▷ King size bed</li>
+                                <li>▷ Working desk</li>
+                                <li>▷ Airconditioner</li>
+                                <li>▷ Cable TV</li>
+                                <li>▷ Direct phone line</li>
+                                <li>▷ Wi-Fi</li>
+                                <li>▷ Bathroom</li>
+                                <li>▷ Minibar</li>
+                            </ul>
+                            <ul>
+                                <li>▷ Room Service</li>
+                                <li>▷ Fax service</li>
+                                <li>▷ Laundry and ironing</li>
+                            </ul>
+                        </div>
+                        <img src="./img/hotel-premier-room-1.jpg" alt="">
+                    </div>
+                    <div class="check-in">
+                        <div>
+                            <h5>Price</h5>
+                            <p>100$ per day</p>
+                        </div>
+                        <div>
+                            <h5>Check In Policy</h5>
+                            <p>Check In: 00:00 - 00:00</p>
+                            <p>Check Out: 00:00 - 00:00</p>
+                        </div>
+                        <div>
+                            <h5>Late Check In Policy</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Double Suite</h3>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                    </div>
+                    <div class="amenitis">
+                        <div>
+                            <ul>
+                                <li>▷ King size bed</li>
+                                <li>▷ Working desk</li>
+                                <li>▷ Airconditioner</li>
+                                <li>▷ Cable TV</li>
+                                <li>▷ Direct phone line</li>
+                                <li>▷ Wi-Fi</li>
+                                <li>▷ Bathroom</li>
+                                <li>▷ Minibar</li>
+                            </ul>
+                            <ul>
+                                <li>▷ Room Service</li>
+                                <li>▷ Fax service</li>
+                                <li>▷ Laundry and ironing</li>
+                            </ul>
+                        </div>
+                        <img src="./img/hotel-premier-room-2.jpg" alt="">
+                    </div>
+                    <div class="check-in">
+                        <div>
+                            <h5>Price</h5>
+                            <p>100$ per day</p>
+                        </div>
+                        <div>
+                            <h5>Check In Policy</h5>
+                            <p>Check In: 00:00 - 00:00</p>
+                            <p>Check Out: 00:00 - 00:00</p>
+                        </div>
+                        <div>
+                            <h5>Late Check In Policy</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Triple Suite</h3>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                    </div>
+                    <div class="amenitis">
+                        <div>
+                            <ul>
+                                <li>▷ King size bed</li>
+                                <li>▷ Working desk</li>
+                                <li>▷ Airconditioner</li>
+                                <li>▷ Cable TV</li>
+                                <li>▷ Direct phone line</li>
+                                <li>▷ Wi-Fi</li>
+                                <li>▷ Bathroom</li>
+                                <li>▷ Minibar</li>
+                            </ul>
+                            <ul>
+                                <li>▷ Room Service</li>
+                                <li>▷ Fax service</li>
+                                <li>▷ Laundry and ironing</li>
+                            </ul>
+                        </div>
+                        <img src="./img/hotel-premier-room-3.jpg" alt="">
+                    </div>
+                    <div class="check-in">
+                        <div>
+                            <h5>Price</h5>
+                            <p>100$ per day</p>
+                        </div>
+                        <div>
+                            <h5>Check In Policy</h5>
+                            <p>Check In: 00:00 - 00:00</p>
+                            <p>Check Out: 00:00 - 00:00</p>
+                        </div>
+                        <div>
+                            <h5>Late Check In Policy</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Deluxe Apartment</h3>
+                    <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint laborum.</p>
+                    </div>
+                    <div class="amenitis">
+                        <div>
+                            <ul>
+                                <li>▷ King size bed</li>
+                                <li>▷ Working desk</li>
+                                <li>▷ Airconditioner</li>
+                                <li>▷ Cable TV</li>
+                                <li>▷ Direct phone line</li>
+                                <li>▷ Wi-Fi</li>
+                                <li>▷ Bathroom</li>
+                                <li>▷ Minibar</li>
+                            </ul>
+                            <ul>
+                                <li>▷ Room Service</li>
+                                <li>▷ Fax service</li>
+                                <li>▷ Laundry and ironing</li>
+                            </ul>
+                        </div>
+                        <img src="./img/hotel-premier-room-4.jpg" alt="">
+                    </div>
+                    <div class="check-in">
+                        <div>
+                            <h5>Price</h5>
+                            <p>100$ per day</p>
+                        </div>
+                        <div>
+                            <h5>Check In Policy</h5>
+                            <p>Check In: 00:00 - 00:00</p>
+                            <p>Check Out: 00:00 - 00:00</p>
+                        </div>
+                        <div>
+                            <h5>Late Check In Policy</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            © Hotel Premier <script>
+                document.write(new Date().getUTCFullYear());
+            </script>
+        </footer>
+    </body>
+</html>

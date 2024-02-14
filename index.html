@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src="./js/time.js" defer></script>
+        <script type='text/javascript' src="./js/weather.js" defer></script>
+        <script type='text/javascript' src="./js/function.js" defer></script>
+        <script type='text/javascript' src="./js/info.js" defer></script>
+        <script type='text/javascript' src='config.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+        <title>Hotel Premier</title>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="/"><img src="./img/hotel-premier-logo.png" alt=""></a>
+                <menu class="header-nav">
+                    <ul>
+                        <li><a class="active" href="/">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="accommodation.html">accomodation</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                </menu>
+                <div class="time-weather">
+                    <a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather"></div></a>
+                    <div class="divider"></div>
+                    <div id="realTime"></div>
+                </div>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </div>
+            <div class="dropdown-menu" id="menuNav">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <menu class="mob-nav">
+                    <ul>
+                        <li><a class="active" href="/">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="accommodation.html">accomodation</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                    <div class="time-weather2">
+                        <a target="_blank" href="https://openweathermap.org/city/785842"></a><div id="weather2"></div></a>
+                        <div class="divider"></div>
+                        <div id="realTime2"></div>
+                    </div>
+                </menu>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <div>
+                    <h1>welcome to hotel premier!</h1>
+                    <div>
+                        <p>We invite You to enjoy a warm welcome and relax in one of the 13 
+                            different types of rooms equipped with an 
+                            elegant décor with modern furnishings and lots more.</p>
+                        <a target="_blank" href="https://www.booking.com/hotel/mk/premier.html">
+                            <button class="btn">Book Now<span></span></button>
+                        </a>
+                    </div>
+                </div>
+                <img src="./img/hotel-premier-hero-illustration.png" alt="">
+            </section>
+            
+            <section class="reviews">
+                <div class="reviews-bg"></div>
+                <div class="review">
+                    <div>
+                        <img class="logo" src="./img/hotel-premier-review-1.png" alt="">
+                        <h5>Tripadvisor</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-review-2.png" alt="">
+                        <a onclick="reviewPop1()">See Reviews</a>
+                    </div>
+                </div>
+                <div class="review">
+                    <div>
+                        <img class="logo" src="./img/hotel-premier-review-3.png" alt="">
+                        <h5>booking.com</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-review-4.png" alt="">
+                        <a onclick="reviewPop2()">See Reviews</a>
+                    </div>
+                </div>
+            </section>
+            <section class="popups">
+                <div class="popup" id="popTripadvisor">
+                    <div class="popup-content">
+                        <i class="fa-solid fa-xmark" onclick="closeReviewPop()"></i>
+                        <div class="pop-title">
+                            <h5>Popular reviews on Tripadvisor</h5>
+                            <a target="_blank" href="https://www.tripadvisor.com/Hotel_Review-g295110-d1051907-Reviews-Hotel_Premier-Skopje_Skopje_Region.html">Want to see more?</a>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: C F</p>
+                                <p>Time of stay: October 2022</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">4 Stars</p>
+                                <p><strong>Pros:</strong> Apartment 32 was quiet, comfortable, unscented, 
+                                    good size (50m), location (15 min. walk from the bus 
+                                    station and main square), staff (Marina), breakfast. 
+                                    For hot water in the bathroom, turn wall switch on, red 
+                                    light will appear on the tank, wait for temperature gauge 
+                                    to move to red zone.</p>
+                                <p><strong>Cons:</strong> Drying rack didn’t work, weak security on wifi, no 
+                                    safe in room (used reception), furniture dated, balcony 
+                                    window challenging to open, no dishes in apartment so we 
+                                    had to get them from kitchen downstairs, changed bedding 
+                                    on day 5 (replaced towels daily).</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: OregonLady80</p>
+                                <p>Time of stay: September 2022</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">5 Stars</p>
+                                <p>I don't know why I can't find pics of this hotel, but it 
+                                    was great! Beds were comfortable, the A/C worked well 
+                                    enough to keep us cool and the location in the Albanian 
+                                    quarter by the bazaar was very nice. It was a short walk 
+                                    to the center. Breakfast was good and the staff were very 
+                                    friendly and welcoming!</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: uincecik</p>
+                                <p>Time of stay: October 2021</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">5 Stars</p>
+                                <p>It is small, very warm and lovely hotel. Located in the 
+                                    city center but away from rush and crowd. Free parking 
+                                    place available as well as free wifi. Very good and 
+                                    delicious breakfast. They have small but nice patio. 
+                                    Griendly and helpfull staff.</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: Cristopher</p>
+                                <p>Time of stay: February 2020</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">5 Stars</p>
+                                <p>First of all, the hotel is much better than it seems on the photos. 
+                                    It's a 4 star hotel on a very low price, modern, close to the 
+                                    old town. The breakfast is fantastic (and also the view from the 
+                                    breakfast room). It is quite difficult to find it by car as GPS takes 
+                                    you to a pedestrian street, but once you find it you will have free 
+                                    parking places and you can walk around the town in no time.</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: ronfromglasgow</p>
+                                <p>Time of stay: June 2019</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">5 Stars</p>
+                                <p>This was just the job. Bot far from where i needed to be 
+                                    and a short walk to town centre. Couple of good local bars 
+                                    and restaurants within 5 minutes walk too. Comfortable 
+                                    room nice and clean. Bathroom fine. Breakfast good quality 
+                                    but bot wide options given size of hotel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup" id="popBooking">
+                    <div class="popup-content">
+                        <i class="fa-solid fa-xmark" onclick="closeReviewPop()"></i>
+                        <div class="pop-title">
+                            <h5>Popular reviews on booking.com</h5>
+                            <a target="_blank" href="https://www.booking.com/hotel/mk/premier.html#tab-reviews">Want to see more?</a>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: Monika</p>
+                                <p>Time of stay: February 2024</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">10 Stars</p>
+                                <p>Excellent location, professional and polite stuff. I have an excellent experience in this hotel.</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: Ersin</p>
+                                <p>Time of stay: February 2024</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">10 Stars</p>
+                                <p>It was very clean and the room was very well-equipped. Very good and friendly staff.
+                                    I have stayed in many hotels in Skopje. I can really recommend a hotel for the first time.</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: Emma</p>
+                                <p>Time of stay: December 2023</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">8 Stars</p>
+                                <p>Good location, nice room, good breakfast, nice staff. Would love to return.</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: Viraj</p>
+                                <p>Time of stay: December 2023</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">9 Stars</p>
+                                <p><strong>Pros:</strong> Great location with excellent staff</p>
+                                <p><strong>Cons:</strong> Too big rooms😜</p>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-title">
+                                <p>From: Alicja</p>
+                                <p>Time of stay: November 2023</p>
+                            </div>
+                            <div class="review-text">
+                                <p class="stars">10 Stars</p>
+                                <p>The staff was very friendly and professional, the room was 
+                                    spacious and breakfast offered plenty of choice. The free 
+                                    indoor parking was a nice bonus. The property is located 
+                                    just a short walk from the center.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="offer">
+                <h4>Our Offer</h4>
+                <div>
+                    <div class="offer-1">
+                        <img src="./img/hotel-premier-room-2.jpg" alt="">
+                        <h5><a href="accommodation.html">ROOMS <i class="fa-solid fa-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="offer-2">
+                        <img src="./img/hotel-premier-room-4.jpg" alt="">
+                        <h5><a href="accommodation.html">SEE MORE</a></h5>
+                    </div>
+                    <div class="offer-3">
+                        <img src="./img/hotel-premier-services-2.jpg" alt="">
+                        <h5><a href="services.html">SERVICES <i class="fa-solid fa-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="offer-4">
+                        <img src="./img/hotel-premier-services-3.jpg" alt="">
+                        <h5><a href="services.html">SEE MORE</a></h5>
+                    </div>
+                </div>
+            </section>
+            <section class="icons">
+                <h4>Popular Amenities</h4>
+                <div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-6.png" alt="">
+                        <h5>Free Parking</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-5.png" alt="">
+                        <h5>Family rooms</h5>
+                    </div>
+                    
+                    <div>
+                        <img src="./img/hotel-premier-icon-4.png" alt="">
+                        <h5>Non-smoking Rooms</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-7.png" alt="">
+                        <h5>High Speed WiFi</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-1.png" alt="">
+                        <h5>Bar / lounge</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-3.png" alt="">
+                        <h5>Dry Cleaning</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-2.png" alt="">
+                        <h5>Laundry service</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-10.png" alt="">
+                        <h5>Air conditioning</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-9.png" alt="">
+                        <h5>Room service</h5>
+                    </div>
+                    <div>
+                        <img src="./img/hotel-premier-icon-8.png" alt="">
+                        <h5>Minibar</h5>
+                    </div>
+                </div>
+            </section>
+           <section class="info-table">
+                <ul id="table-list">
+                    <li class="active">What's Nearby</li>
+                    <li>Airport Info</li>
+                </ul>
+                <div class="item active">
+                    <div>
+                        <h5>Attractions</h5>
+                        <div>
+                            <div>
+                                <p>Museum of the City of Skopje</p><p>650 m</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/MHsCYHLDu62iPvXF9">See Map</a>
+                            </div>
+                            <div>
+                                <p>Macedonia Square</p><p>800 m</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/8mUuFHc1TnrGPVqR7">See Map</a>
+                            </div>
+                            <div>
+                                <p>Stone Bridge</p><p>850 m</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/eEqcb2ZSGdCCVXde6">See Map</a>
+                            </div>
+                            <div>
+                                <p>Kale Fortress</p><p>1.1 km</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/ZsRpHxM9ZjJcL3Je8">See Map</a>
+                            </div>
+                            <div>
+                                <p>Museum of Macedonia</p><p>1.4 km</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/vqTYYuGTmooYtSGw5">See Map</a>
+                            </div>
+                            <div>
+                                <p>Centrall Park Of Skopje</p><p>2.6 km</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/7h9j4CzwLemhCwGk6">See Map</a>
+                            </div>
+                            <div>
+                                <p>Park of Cair</p><p>2.9 km</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/yXLJSbaStBYovCaC7">See Map</a>
+                            </div>
+                            <div>
+                                <p>Millennium Cross</p><p>4.5 km</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/Eqebs1LvmQgy1WZj8">See Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div>
+                        <h5>Restaurants & Cafes</h5>
+                        <div>
+                            <div>
+                                <p>Barbeque per kilo Amigo</p><p>200 m</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/MSLcsUwEmRFn4WtBA">See Map</a>
+                            </div>
+                            <div>
+                                <p>Pizza Jakomo</p><p>300 m</p>
+                                <a target="_blank" href="https://maps.app.goo.gl/hV1MkfANbCzZ8KK26">See Map</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <h5>Macedonian Airports</h5>
+                        <div>
+                            <div>
+                                <p>Skopje International Airport</p><p>15 km</p>
+                            </div>
+                            <div>
+                                <p>Ohrid St. Paul The Apostle Airport</p><p>180 km</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div>
+                        <h5>Neighboring Airports</h5>
+                        <div>
+                            <div>
+                                <p>Pristina International Airport</p><p>XK</p><p>71 km</p>
+                            </div>
+                            <div>
+                                <p>Niš Constantine the Great Airport</p><p>RS</p><p>206 km</p>
+                            </div>
+                            <div>
+                                <p>Albania International Airport</p><p>AL</p><p>71 km</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </section>
+        </main>
+        <footer>
+            © Hotel Premier <script>
+                document.write(new Date().getUTCFullYear());
+            </script>
+        </footer>
+    </body>
+</html>

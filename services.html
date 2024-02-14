@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src="./js/time.js" defer></script>
+        <script type='text/javascript' src="./js/weather.js" defer></script>
+        <script type='text/javascript' src="./js/function.js" defer></script>
+        <script type='text/javascript' src="./js/services.js" defer></script>
+        <script type='text/javascript' src='config.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+        <title>Services</title>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="/"><img src="./img/hotel-premier-logo.png" alt=""></a>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="accommodation.html">accomodation</a></li>
+                        <li><a class="active" href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                </nav>
+                <div class="time-weather">
+                    <a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather"></div></a>
+                    <div class="divider"></div>
+                    <div id="realTime"></div>
+                </div>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </div>
+            <div class="dropdown-menu" id="menuNav">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <nav class="mob-nav">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a href="about.html">about us</a></li>
+                        <li><a href="accommodation.html">accomodation</a></li>
+                        <li><a class="active" href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                    <div class="time-weather2">
+                        <div id="weather2"></div><a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather2"></div></a>
+                        <div class="divider"></div>
+                        <div id="realTime2"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Services</h1>
+            <section>
+                <ul id="services-list" class="buttons">
+                    <li class="active btn">Restaurant<span></span></li>
+                    <li class="btn">Conference Room<span></span></li>
+                    <li class="btn">Parking<span></span></li>
+                    <li class="btn">Airport Transportation<span></span></li>
+                </ul>
+            </section>
+            <section class="services-desc">
+                <div class="item active">
+                    <h3>Restaurant</h3>
+                    <div>
+                        <div>
+                            <p>Hotel Premier has a restaurant and bar with 30 seats inside and also a terace.</p>
+                            <p>The restaurant offers you a rich and diverse buffet breakfast 
+                                which guarantees a great start of the day in the morning. It 
+                                offers a great selection of food witch will be appealing to all 
+                                guest profiles. In the restaurant You can enjoy a large variety 
+                                of coffees, cold beers, drinks and refreshments.</p>
+                        </div>
+                        <img src="./img/hotel-premier-services-1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Conference Room</h3>
+                    <div>
+                        <div>
+                            <p>Hotel Premier has a conference room for 20 people.</p>
+                            <p>Hotel Premier is offering you a possibility to organise meetings, 
+                                workshops and seminars up to 20 people. Free usage of projection 
+                                canvas and projector. If the work group needs additional equipment, 
+                                translation, or snack we are on disposal.</p>
+                        </div>
+                        <img src="./img/hotel-premier-services-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Parking</h3>
+                    <div>
+                        <div>
+                            <p>Hotel Premier has a safe underground garage for 10 vehicles.</p>
+                            <p>Hotel Premier is offering you free usage of our underground 
+                                garage, with a capacity of 10 vehicles and 24 hours of 
+                                monitoring.</p>
+                        </div>
+                        <img src="./img/hotel-premier-services-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <h3>Airport Transportation</h3>
+                    <div>
+                        <p>Hotel Premier Hotel Premier is organising transport from the 
+                            airport to the hotel and from the hotel to the airpot.</p>
+                        <img src="./img/hotel-premier-services-4.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            © Hotel Premier <script>
+                document.write(new Date().getUTCFullYear());
+            </script>
+        </footer>
+    </body>
+</html>

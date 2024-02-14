@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src="./js/time.js" defer></script>
+        <script type='text/javascript' src="./js/weather.js" defer></script>
+        <script type='text/javascript' src="./js/function.js" defer></script>
+        <script type='text/javascript' src='config.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://momentjs.com/downloads/moment.min.js"></script>
+        <script src="https://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+        <title>About Hotel Premier</title>
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="/"><img src="./img/hotel-premier-logo.png" alt=""></a>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        <li><a class="active" href="about.html">about us</a></li>
+                        <li><a href="accommodation.html">accomodation</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                </nav>
+                <div class="time-weather">
+                    <a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather"></div></a>
+                    <div class="divider"></div>
+                    <div id="realTime"></div>
+                </div>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </div>
+            <div class="dropdown-menu" id="menuNav">
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <nav class="mob-nav">
+                    <ul>
+                        <li><a class="active" href="/">home</a></li>
+                        <li><a class="active" href="about.html">about us</a></li>
+                        <li><a href="accommodation.html">accomodation</a></li>
+                        <li><a href="services.html">services</a></li>
+                        <li><a href="">en</a></li>
+                    </ul>
+                    <div class="time-weather2">
+                        <a target="_blank" href="https://openweathermap.org/city/785842"><div id="weather2"></div></a>
+                        <div class="divider"></div>
+                        <div id="realTime2"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>About us</h1>
+            <div class="about">
+                <div class="text">
+                    <p>Hotel Premier is located in the heart of Skopje, the capital of 
+                        Macedonia. 4 star hotel, which is very easy to reach from the 
+                        A4 national road and is located 20km from the Airport Alexander 
+                        the Great, walking distance from the main bus and trail station 
+                        and from main city square. The marvelous ambience, atmosphere 
+                        and high quality service makes Hotel Premier an excellent choice 
+                        for Your trip.</p>
+                    <p>
+                        Hotel Premier invites You to enjoy a warm welcome by the 
+                        hotel staff and relax in one of the 13 different types 
+                        of rooms equipped with an elegant décor with modern 
+                        furnishings , private bathroom, conditioning, cable TV, 
+                        mini bar , direct telephone line, safe box and Wi-Fi 
+                        Internet connection.
+                    </p>
+                </div>
+                <ul>
+                    <h3>Hotel Premier Offers:</h3>
+                    <li>4 - Classic single starting at 65€</li>
+                    <li>4 - Double suite starting at 90€</li>
+                    <li>3 - Triple suite starting at 120€</li>
+                    <li>1 - Studio starting at 120€</li>
+                    <li>1 - Deluxe apartment starting at 180€</li>
+                </ul>
+            </div>
+            <section class="info">
+                <ul>
+                    <li><a href="tel:+38923223666">
+                        <i class="fa-solid fa-phone"></i>
+                        +389 2 322 3666
+                    </a></li>
+                    <li><a href="tel:++38970280903">
+                        <i class="fa-solid fa-phone"></i>
+                        +389 70 280 903
+                    </a></li>
+                    <li><a href="tel:+38923290980">
+                        <i class="fa-solid fa-fax"></i>
+                        +389 2 329 0980
+                    </a></li>
+                </ul>
+                <ul>
+                    <li><a href="mailto:info@hotel-premier.com.mk">
+                        <i class="fa-solid fa-envelope"></i>
+                        info@hotel-premier.com.mk
+                    </a></li>
+                    <li><a href="mailto:reservation@hotel-premier.com.mk">
+                        <i class="fa-solid fa-envelope"></i>
+                        reservation@hotel-premier.com.mk
+                    </a></li>
+                    <li><a href="https://maps.app.goo.gl/p3dsmVs1pLLYthaC6" target="_blank">
+                        <i class="fa-solid fa-map-location"></i>
+                        Josif Josifovski Sveshtarot No. 36
+                    </a></li>
+                </ul>
+            </section>
+            <section class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.4639385570263!2d21.434597275133147!3d41.990317858382234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415c828870fa3%3A0x9229cf6b7c3db6f8!2sHotel%20Premier!5e0!3m2!1sen!2smk!4v1702377831416!5m2!1sen!2smk" 
+                width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </main>
+        <footer>
+            © Hotel Premier <script>
+                document.write(new Date().getUTCFullYear());
+            </script>
+        </footer>
+    </body>
+</html>
