@@ -1,0 +1,1 @@
+let string1=["e7d5477c","1e946659"],string2=["cc88d244","cce3c9fd"];var one=string1[1]+string1[0],two=string2[1]+string2[0];const config={key:two+one};

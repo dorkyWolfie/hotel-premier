@@ -92,6 +92,18 @@ header .dropdown-menu {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+#weather, #weather2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#weather2 img {
+    width: 50px;
 }
 
 .divider {
